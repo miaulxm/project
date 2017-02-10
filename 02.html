@@ -5,14 +5,32 @@
   <meta charset="utf-8">
   <title>page1</title>
   <link rel="stylesheet" type="text/css" href="page1.css" />
-  <script type="text/javascript" src="test.js"></script> 
+  <script>
+  //js
+  function sclick() {
+    document.getElementById("title").className = "div on";
+    alert("hi");
+  }
+
+  function hdclick() {
+    document.getElementById("hd-chick").className = "div on1";
+    alert("hi");
+  }
+
+  function hdtagclick() {
+    document.getElementById("triangle").className = "div on2";
+    document.getElementById("ldb-bottom").className = "div on3";
+    alert("hi");
+  }
+  </script>
+  <!--   <script type="text/javascript" src="test.js"></script>  -->
 </head>
 
 <body>
   <div class="fullpage">
     <div class="page-hd">
       <div class="hdc">
-        <div class="hd1">
+        <div class="hd1" id=hd-chick onclick="javascript:hdclick();">
           <div class="picture1"></div>
           <div class="words">
             <a href="#" id="current">【合集】游戏源码、微信资源16年12月经典贴</a>
@@ -114,9 +132,9 @@
          <div class="hdtagc"></div>
          <div class="logoc"><a class="ldb-bottom-logo4" href="#" id="current"></a></div>
        </div> -->
-            <div class="hdtag">
-              <div class="triangle-up"></div>
-              <a class="ldb-bottom-logo1" href="#" id="current"></a>
+            <div class="hdtag" onclick="javascript:hdtagclick();">
+              <div class="triangle-up" id="triangle"></div>
+              <a class="ldb-bottom-logo1" href="#" id="ldb-bottom"></a>
             </div>
             <div class="hdtag">
               <div class="triangle-up"></div>
@@ -153,7 +171,7 @@
         </div>
         <div class="rbd">
           <div class="rbdh">
-            <div class="title-left">
+            <div class="title-left" id="title" onclick="javascript:sclick();">
               <a class="left-logo"></a><span>&nbsp&nbsp</span><a href="#">最新</a>
             </div>
             <div class="title-middle">
@@ -179,6 +197,8 @@
           </div>
         </div>
       </div>
+    </div>
+    <div id="try" href="#">
     </div>
 </body>
 
